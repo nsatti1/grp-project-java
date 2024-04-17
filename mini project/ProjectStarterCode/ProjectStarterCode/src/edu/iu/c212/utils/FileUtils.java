@@ -4,6 +4,7 @@ import edu.iu.c212.models.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileUtils {
@@ -30,7 +31,12 @@ public class FileUtils {
     }
 
     public static void writeInventoryToFile(List<Item> items){
-        // TODO
+        List<String> lines = new ArrayList<>();
+        for (Item item : items) {
+            String line = item.getName() + "," + item.getPrice() + "," + item.getQuantity() + "," + item.getAisle();
+            lines.add(line);
+        }
+        writeLineToOutputFile("inventory.txt");
 
     }
 

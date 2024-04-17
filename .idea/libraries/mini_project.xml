@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="mini project">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mini project/HardwareStarterCode.zip!/" />
+      <root url="jar://$PROJECT_DIR$/mini project/HardwareResources.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

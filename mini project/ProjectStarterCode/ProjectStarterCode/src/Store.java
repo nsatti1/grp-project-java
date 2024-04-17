@@ -30,6 +30,12 @@ public class Store implements IStore {
 
     }
     public void saveStaffFromFile(){
+        try {
+            FileUtils.writeStaffToFile(staff);
+        } catch (Exception e) {
+            System.err.println("Error saving staffs to file: " + e.getMessage());
+            System.exit(1);
+        }
 
     }
     public String findCost(String itemName){
@@ -49,7 +55,7 @@ public class Store implements IStore {
             System.err.println("Error reading items from file: " + e.getMessage());
             System.exit(1);
         }
-        return null;
+        return item;
         /*try {
             List<String> lines = FileUtils.readInventoryFromFile("inventory.txt");
             for (String line : lines){

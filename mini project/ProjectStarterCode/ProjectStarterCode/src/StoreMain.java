@@ -22,9 +22,6 @@ public class StoreMain {
                 run = executeCommand(in);
             }
         }
-        int plankLength = 195;
-        List<Integer> sawedPlanks = sawPlank(plankLength);
-        System.out.println(sawedPlanks);
         // Close the scanner
         //scanner.close();
 

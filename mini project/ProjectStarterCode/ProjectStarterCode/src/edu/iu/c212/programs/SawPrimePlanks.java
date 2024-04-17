@@ -48,7 +48,7 @@ public class SawPrimePlanks{
         // If the plank length is already prime, add it directly to the result
         if (isPrime(plankLength)) {
             result.add(plankLength);
-            return (int) result;
+            return 0; //TODO
         }
 
         // Try dividing the plank by each increasing integer (starting from 2) to find prime lengths
@@ -57,12 +57,12 @@ public class SawPrimePlanks{
                 int count = plankLength / factor; // How many planks of this size?
                 List<Integer> subPlanks = new ArrayList<>();
                 for (int i = 0; i < count; i++) {
-                    subPlanks.addAll(sawPlank(factor)); // Recursively saw each of these sub-planks
+                    //subPlanks.addAll(sawPlank(factor)); // Recursively saw each of these sub-planks
                 }
                 result.addAll(subPlanks);
                 break; // Stop after successful division by the smallest prime factor
             }
         }
-        return new ArrayList<>();
+        return 0; //TODO
     }
 }
